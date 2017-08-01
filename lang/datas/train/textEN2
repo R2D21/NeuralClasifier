@@ -1,0 +1,17 @@
+The parser 
+code is dual licensed (in a similar manner to MySQL, etc.).  
+Open source licensing is under the 
+The main technical ideas behind how these parsers work appear in these
+papers.  Feel free to cite one or more of the following papers depending on what you
+are using.  Since the parser is regularly updated, we appreciate it if
+papers with numerical results reflecting parser performance mention the
+version of the parser being used.
+The parser can read various forms of plain text input and can output
+various analysis formats, including part-of-speech tagged text, phrase
+structure trees, and a grammatical relations (typed dependency) format.
+For example, consider the text:
+
+The following output shows
+part-of-speech tagged text, then a context-free phrase structure grammar
+representation, and finally a typed dependency representation. All of
+these are different views of the output of the parser.

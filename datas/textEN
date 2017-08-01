@@ -1,0 +1,7 @@
+If an ANN is to be able to learn a problem, it must
+be defi ned as a function with a set of input and output variables supported by examples of how this
+function should work.A problem like the XOR func-
+tion is already defi ned as a function with two bina-
+ry input variables and a binary output variable, and
+with the examples which are defi ned by the results of
+four different input patterns.

@@ -1,0 +1,23 @@
+aving too many weights can also
+be a problem, since learning can be more diffi cult and there is
+also a chance that the ANN will learn specifi c features of the input variables instead of general patterns which can be extrapo-
+lated to other data sets. In order for an ANN to accurately classify data not in the training set, this ability to generalise is crucial – without it, the ANN will be unable to distinguish frequencies that it has not been trained with.The training is done by continually adjusting the weights
+so that the output of the ANN matches the output in the train-
+ing fi le. One cycle where the weights are adjusted to match the
+output in the training fi le is called an epoch. In this example the
+maximum number of epochs have been set to 200, and a sta-
+tus report is printed every 10 epochs. When measuring how
+close an ANN matches the desired output, the mean square er-
+ror is usually used. The mean square error is the mean value of
+the squared difference between the actual and the desired out-
+put of the ANN, for individual training patterns. A small mean
+square error means a close match of the desired output.
+When the program in Listing 2 is run, the ANN will be
+trained and some status information (see Listing 4) will be
+printed to make it easier to monitor progress during training.
+After training, the ANN could be used directly to determine
+which language a text is written in, but it is usually desirable to
+keep training and execution in two different programs, so that
+the more time-consuming training needs only be done only
+once. For this reason, Listing 2 simply saves the ANN to a fi le
+that can be loaded by another program

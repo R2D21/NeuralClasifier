@@ -1,0 +1,9 @@
+As well as providing an 
+The parser provides As of version 3.4 in 2014, the parser includes the code necessary to run a In version 3.5.0 (October 2014) we released a The package includes a tool for scoring of generic dependency parses, in a class 
+The parser is available for download,
+The download is a 261 MB zipped file (mainly consisting of
+    included grammar data files).  If you unpack the zip file, you
+    should have everything needed.  
+    Simple scripts are included to
+    invoke the parser on a Unix or Windows system.  For another
+    system, you merely need to similarly configure the classpath.

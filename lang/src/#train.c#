@@ -1,0 +1,15 @@
+/*
+** train.c for classifier in /home/remi/neuralNetwork/neuralBrain
+**
+** Made by Rémi
+** Login   <remi@epitech.net>
+**
+** Started on  Mon Apr  3 20:41:48 2017 Rémi
+
+** Last update Mon Apr  3 20:41:48 2017 Rémi
+*/
+
+#include "my.h"
+
+#include <fcntl.h>
+

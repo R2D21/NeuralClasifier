@@ -1,0 +1,14 @@
+A natural language parser is a program that works out the grammatical
+
+This package is a Java implementation of probabilistic natural language
+parsers, 
+both highly optimized PCFG and lexicalized dependency parsers, and a
+lexicalized PCFG parser. 
+The lexicalized probabilistic parser implements a factored product
+	model, with separate PCFG 
+    phrase structure and lexical dependency experts, whose preferences
+    are combined by efficient exact inference, using an A* algorithm.
+Or the software can be used simply as an accurate unlexicalized stochastic
+context-free grammar parser.
+Either of these yields a good performance statistical parsing system.
+A GUI is provided for viewing the phrase structure tree output of the parser.

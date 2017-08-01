@@ -1,0 +1,74 @@
+## NOTES ##
+-----------
+- The library is free to use for any kind of use (including commercial use)
+- The usage of this library is only in responsibility of the user
+- The author of this library is not responsible for any situation that the usage of this library could lead to - the usage is on your own risk
+
+
+## BACKGROUND ##
+----------------
+- This library was developed in Linux and was tested with GCC 4.8.2
+- Starting from version from December 2015, it was tested also with Microsoft VC++ 2010 (Should also work on newer versions)
+
+
+## INCLUDED MODULES ##
+----------------------
+- This library contains 3 modules:
+    - FeedForward Network
+        - Perceptron
+	    - Neuron
+
+- The "Neuron" module is a dependency for both of "FeedForward Network" and "Perceptron"
+
+
+## INCLUDED EXAMPLES ##
+-----------------------
+This library contains one Perceptron example and one FeedForward Network example
+
+
+## API DOCUMENTATION ##
+-----------------------
+- Currently the API documentation is only available inside the "*.h" files, inside the "include" directory
+- An HTML-based documentation will be added in the future
+
+## COMPILATION INSTRUCTIONS FOR MICROSOFT VISUAL STUDIO ##
+----------------------------------------------------------
+* Step 1: Extract the archive. A library root directory named "freeNN" will be created.
+* Step 2: In your existing Visual C++ project, go to Solution Explorer -> Right click on your project header in the tree -> Properties
+           - In the tree on the left go to Configuration Properties -> VC++ Directories
+	              - Click on "Include Directories" in the table on the right. A little arrow will appear on the right, click on the arrow and "Edit"
+		                 - Add a new line with path to the "include" directory, which is found in the library root
+				 * Step 3: In your existing Visual C++ project, go to Solution Explorer -> Right click on "Source Files" in the project's tree -> Add -> Existing Item
+				            - Add all the files from the "src" directory, which is found in the library root
+					    * Step 4: (Optional) If you want to run an example, repeat step 3 with a file from the "examples" directory, which is found in the library root
+					    * Step 5: Build the solution
+
+
+## COMPILATION INSTRUCTIONS FOR GCC IN LINUX ##
+-----------------------------------------------
+
+* Step 1 - Creating a shared library: (Skip this step if you plan to use the library only statically)
+  ---------------------------------------------------------------------------------------------------
+    unzip freeNN
+      cd freeNN
+        mkdir lib
+	  gcc -fpic -shared src/*.c -lm -Iinclude -o lib/libfreenn.so
+
+* Step 2 - Compiling the usage examples:
+  --------------------------------------
+    mkdir bin
+
+  ** Option 1 - Compile statically **
+    -----------------------------------
+      gcc examples/perceptron_example.c src/perceptron.c src/neuron.c -lm -Iinclude -o bin/perceptron_example_static
+        gcc examples/ffnet_example.c src/feedforwardnetwork.c src/neuron.c -lm -Iinclude -o bin/ffnet_example_static
+
+  ** Option 2 - Compile dynamically (Using the shared library from Step 1) **
+    ---------------------------------------------------------------------------
+      gcc examples/perceptron_example.c -Llib -lfreenn -lm -Iinclude -o bin/perceptron_example_dynamic
+        gcc examples/ffnet_example.c -Llib -lfreenn -lm -Iinclude -o bin/ffnet_example_dynamic
+
+   - Note: To run the dynamically compiled binaries, the "lib" directory from step 1 has to be added to LD_LIBRARY_PATH
+
+
+

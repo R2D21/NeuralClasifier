@@ -1,0 +1,1 @@
+ANNs apply the principle of function approximation by example, meaning that they learn a function by looking at examples of this function. One of the simplest examples is an ANN learning the XOR function but it could just as easily be learning to determine the language of a text or whether there is a tumour visible in an X-ray image.

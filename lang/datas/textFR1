@@ -1,0 +1,9 @@
+Il existe dans la version 1.2.0 de la bibliothè-
+que FANN quatre algorithmes d’apprentissage différents, cha-
+cun faisant appel à un genre de rétro-propagation. Les algorith-
+mes de rétro-propagation jouent sur les poids en rétro-propa-
+geant l’erreur de la couche de sortie à la couche d’entrée tout
+en ajustant les poids. La valeur de l’erreur ainsi rétro-propagée,
+pourrait être soit l’erreur calculée pour un seul modèle d’ap-
+prentissage (dit incrémentiel), soit la somme des erreurs issues
+de l’ensemble du fi chier d’apprentissage (dit séquentiel).
